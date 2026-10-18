@@ -63,3 +63,14 @@ def reset_form():
     canvas.draw()
 
 def buat_grafik(g_str, riwayat, akar):
+     ax.clear()
+    xmin = min(riwayat) - 1
+    xmax = max(riwayat) + 1
+    
+    xs = [xmin + i * (xmax - xmin) / 100 for i in range(101)]
+    try:
+        ys = [eval(g_str, {"x": x, "math": math, "sqrt": math.sqrt, "sin": math.sin, "cos": math.cos, "exp": math.exp}) for x in xs]
+    except:
+        ys = xs
+
+    ax.plot(xs, ys, label="y = g(x)", color="#2563eb", linewidth=2.2)
