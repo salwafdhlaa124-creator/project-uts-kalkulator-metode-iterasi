@@ -103,3 +103,14 @@ main_layout.pack(fill=tk.BOTH, expand=True, padx=15, pady=15)
 left_col = tk.Frame(main_layout, bg="#bae6fd")
 left_col.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(0, 10))
 
+# Card Input Parameter (Nuansa Soft Blue/Cyan yang cerah)
+input_card = tk.LabelFrame(left_col, text=" ⚙️ Parameter Input ", font=("Segoe UI", 10, "bold"), bg="#e0f2fe", fg="#1e3a8a", padx=15, pady=12, bd=2, relief="groove")
+input_card.pack(fill=tk.X, pady=(0, 10))
+
+tk.Label(input_card, text="Persamaan g(x):", bg="#e0f2fe", fg="#1e293b", font=("Segoe UI", 9, "bold")).grid(row=0, column=0, sticky="w", pady=6)
+
+opsi_persamaan = [
+    "math.sqrt(2 + x)",
+    "math.exp(-x)",
+    "math.cos(x)",
+    "(x + 2/x) / 2"
