@@ -124,3 +124,13 @@ entry_x0 = tk.Entry(input_card, width=28, font=("Segoe UI", 10), relief="solid",
 entry_x0.grid(row=1, column=1, pady=6, padx=10) # Kosong
 
 tk.Label(input_card, text="Toleransi Error:", bg="#e0f2fe", fg="#1e293b", font=("Segoe UI", 9, "bold")).grid(row=2, column=0, sticky="w", pady=6)
+entry_tol = tk.Entry(input_card, width=28, font=("Segoe UI", 10), relief="solid", bd=1)
+entry_tol.grid(row=2, column=1, pady=6, padx=10) # Kosong
+
+tk.Label(input_card, text="Maksimum Iterasi:", bg="#e0f2fe", fg="#1e293b", font=("Segoe UI", 9, "bold")).grid(row=3, column=0, sticky="w", pady=6)
+entry_iter = tk.Entry(input_card, width=28, font=("Segoe UI", 10), relief="solid", bd=1)
+entry_iter.grid(row=3, column=1, pady=6, padx=10) # Kosong
+
+# Tombol Aksi
+btn_frame = tk.Frame(input_card, bg="#e0f2fe")
+btn_frame.grid(row=4, column=0, columnspan=2, pady=(10, 0))
