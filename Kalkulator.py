@@ -74,3 +74,13 @@ def buat_grafik(g_str, riwayat, akar):
         ys = xs
 
     ax.plot(xs, ys, label="y = g(x)", color="#2563eb", linewidth=2.2)
+ax.plot(xs, xs, label="y = x", color="#ef4444", linestyle="--", linewidth=1.5)
+    ax.plot(akar, akar, 'go', markersize=9, label=f"Akar ({akar:.4f})")
+    
+    ax.set_title("Grafik Konvergensi Metode Iterasi", fontsize=10, fontweight="bold", color="#1e3a8a")
+    ax.set_xlabel("Nilai x", fontsize=9)
+    ax.set_ylabel("Nilai y", fontsize=9)
+    ax.legend(loc="upper left", frameon=True, facecolor="#f0fdf4")
+    ax.grid(True, linestyle=":", alpha=0.6)
+    canvas.draw()
+# ==================== TAMPILAN GUI TKINTER BERWARNA ====================
