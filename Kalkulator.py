@@ -83,4 +83,14 @@ ax.plot(xs, xs, label="y = x", color="#ef4444", linestyle="--", linewidth=1.5)
     ax.legend(loc="upper left", frameon=True, facecolor="#f0fdf4")
     ax.grid(True, linestyle=":", alpha=0.6)
     canvas.draw()
+
 # ==================== TAMPILAN GUI TKINTER BERWARNA ====================
+root = tk.Tk()
+root.title("Kalkulator Metode Iterasi Titik Tetap - Komnum C")
+root.geometry("1150x700")
+root.configure(bg="#bae6fd")  # Latar belakang utama biru cerah (tidak polos)
+
+# Header Atas (Simpel & Elegan dengan warna Navy/Biru Tua)
+header_frame = tk.Frame(root, bg="#1e3a8a", pady=10)
+header_frame.pack(fill=tk.X)
+tk.Label(header_frame, text="Kalkulator Metode Iterasi Titik Tetap", font=("Segoe UI", 14, "bold"), bg="#1e3a8a", fg="#fef08a").pack()
