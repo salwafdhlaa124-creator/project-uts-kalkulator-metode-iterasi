@@ -94,3 +94,12 @@ root.configure(bg="#bae6fd")  # Latar belakang utama biru cerah (tidak polos)
 header_frame = tk.Frame(root, bg="#1e3a8a", pady=10)
 header_frame.pack(fill=tk.X)
 tk.Label(header_frame, text="Kalkulator Metode Iterasi Titik Tetap", font=("Segoe UI", 14, "bold"), bg="#1e3a8a", fg="#fef08a").pack()
+
+# Layout Utama
+main_layout = tk.Frame(root, bg="#bae6fd")
+main_layout.pack(fill=tk.BOTH, expand=True, padx=15, pady=15)
+
+# Kolom Kiri (Input & Tabel)
+left_col = tk.Frame(main_layout, bg="#bae6fd")
+left_col.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(0, 10))
+
