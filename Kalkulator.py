@@ -114,3 +114,13 @@ opsi_persamaan = [
     "math.exp(-x)",
     "math.cos(x)",
     "(x + 2/x) / 2"
+]
+combo_g = ttk.Combobox(input_card, values=opsi_persamaan, width=26, font=("Segoe UI", 10))
+combo_g.grid(row=0, column=1, pady=6, padx=10)
+combo_g.set("") # Dikosongkan agar user pilih sendiri
+
+tk.Label(input_card, text="Tebakan Awal (x0):", bg="#e0f2fe", fg="#1e293b", font=("Segoe UI", 9, "bold")).grid(row=1, column=0, sticky="w", pady=6)
+entry_x0 = tk.Entry(input_card, width=28, font=("Segoe UI", 10), relief="solid", bd=1)
+entry_x0.grid(row=1, column=1, pady=6, padx=10) # Kosong
+
+tk.Label(input_card, text="Toleransi Error:", bg="#e0f2fe", fg="#1e293b", font=("Segoe UI", 9, "bold")).grid(row=2, column=0, sticky="w", pady=6)
