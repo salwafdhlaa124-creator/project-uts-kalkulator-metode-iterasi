@@ -36,13 +36,13 @@ def hitung():
             riwayat_x.append(x_baru)
             
             if error < tol:
-                lbl_status.config(text=f"✨ Sukses! Akar ditemukan: {x_baru:.6f} (Iterasi ke-{i})", fg="#047857")
+                lbl_status.config(text=f"Sukses! Akar ditemukan: {x_baru:.6f} (Iterasi ke-{i})", fg="#047857")
                 buat_grafik(g_str, riwayat_x, x_baru)
                 return
             
             x_sekarang = x_baru
 
-        lbl_status.config(text=f"⚠️ Maksimum iterasi tercapai. Akar terakhir: {x_sekarang:.6f}", fg="#b45309")
+        lbl_status.config(text=f"Maksimum iterasi tercapai. Akar terakhir: {x_sekarang:.6f}", fg="#b45309")
         buat_grafik(g_str, riwayat_x, x_sekarang)
 
     except Exception as e:
@@ -53,3 +53,13 @@ def reset_form():
     entry_x0.delete(0, tk.END)
     entry_tol.delete(0, tk.END)
     entry_iter.delete(0, tk.END)
+  for row in tree.get_children():
+        tree.delete(row)
+    lbl_status.config(text="Status: Silakan isi parameter di atas dan klik 'Hitung Akar'", fg="#1e3a8a")
+    ax.clear()
+    ax.set_facecolor('#ffffff')
+    ax.set_title("Grafik Konvergensi Metode Iterasi", fontsize=10, fontweight="bold", color="#1e3a8a")
+    ax.grid(True, linestyle=":", alpha=0.5)
+    canvas.draw()
+
+def buat_grafik(g_str, riwayat, akar):
