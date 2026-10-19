@@ -134,3 +134,13 @@ entry_iter.grid(row=3, column=1, pady=6, padx=10) # Kosong
 # Tombol Aksi
 btn_frame = tk.Frame(input_card, bg="#e0f2fe")
 btn_frame.grid(row=4, column=0, columnspan=2, pady=(10, 0))
+
+btn_hitung = tk.Button(btn_frame, text="🚀 Hitung Akar", bg="#2563eb", fg="white", font=("Segoe UI", 9, "bold"), relief="flat", padx=15, pady=6, cursor="hand2", command=hitung)
+btn_hitung.pack(side=tk.LEFT, padx=5)
+
+btn_reset = tk.Button(btn_frame, text="🔄 Reset Form", bg="#475569", fg="white", font=("Segoe UI", 9, "bold"), relief="flat", padx=15, pady=6, cursor="hand2", command=reset_form)
+btn_reset.pack(side=tk.LEFT, padx=5)
+
+# Status Bar
+lbl_status = tk.Label(left_col, text="Status: Silakan isi parameter di atas dan klik 'Hitung Akar'", font=("Segoe UI", 9, "bold"), bg="#bae6fd", fg="#1e3a8a")
+lbl_status.pack(anchor="w", pady=(0, 5))
