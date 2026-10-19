@@ -181,3 +181,6 @@ canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
 
 ax.set_title("Grafik Konvergensi Metode Iterasi", fontsize=10, fontweight="bold", color="#1e3a8a")
 ax.grid(True, linestyle=":", alpha=0.5)
+canvas.draw()
+
+root.mainloop()
