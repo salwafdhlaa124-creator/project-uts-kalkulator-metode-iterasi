@@ -178,3 +178,6 @@ fig.patch.set_facecolor('#fff7ed')
 ax.set_facecolor('#ffffff')
 canvas = FigureCanvasTkAgg(fig, master=right_col)
 canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+
+ax.set_title("Grafik Konvergensi Metode Iterasi", fontsize=10, fontweight="bold", color="#1e3a8a")
+ax.grid(True, linestyle=":", alpha=0.5)
