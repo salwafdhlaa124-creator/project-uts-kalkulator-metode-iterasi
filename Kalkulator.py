@@ -165,3 +165,13 @@ tree.tag_configure('odd', background='#ffffff')
 
 scrollbar = ttk.Scrollbar(table_card, orient="vertical", command=tree.yview)
 tree.configure(yscrollcommand=scrollbar.set)
+
+tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+# Kolom Kanan (Grafik dengan Nuansa Warm Peach / Soft Cream)
+right_col = tk.LabelFrame(main_layout, text=" 📈 Visualisasi Grafik Konvergensi ", font=("Segoe UI", 10, "bold"), bg="#fff7ed", fg="#9a3412", padx=10, pady=10, bd=2, relief="groove")
+right_col.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=(10, 0))
+
+fig, ax = plt.subplots(figsize=(5, 5), dpi=100)
+fig.patch.set_facecolor('#fff7ed')
