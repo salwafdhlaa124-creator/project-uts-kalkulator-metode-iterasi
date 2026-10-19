@@ -175,3 +175,6 @@ right_col.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=(10, 0))
 
 fig, ax = plt.subplots(figsize=(5, 5), dpi=100)
 fig.patch.set_facecolor('#fff7ed')
+ax.set_facecolor('#ffffff')
+canvas = FigureCanvasTkAgg(fig, master=right_col)
+canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
