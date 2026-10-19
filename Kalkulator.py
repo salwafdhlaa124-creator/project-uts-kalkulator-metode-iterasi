@@ -144,3 +144,12 @@ btn_reset.pack(side=tk.LEFT, padx=5)
 # Status Bar
 lbl_status = tk.Label(left_col, text="Status: Silakan isi parameter di atas dan klik 'Hitung Akar'", font=("Segoe UI", 9, "bold"), bg="#bae6fd", fg="#1e3a8a")
 lbl_status.pack(anchor="w", pady=(0, 5))
+
+# Card Tabel Hasil Iterasi (Nuansa Soft Mint Green)
+table_card = tk.LabelFrame(left_col, text=" 📊 Tabel Hasil Iterasi ", font=("Segoe UI", 10, "bold"), bg="#f0fdf4", fg="#166534", padx=10, pady=10, bd=2, relief="groove")
+table_card.pack(fill=tk.BOTH, expand=True)
+
+style = ttk.Style()
+style.theme_use("clam")
+style.configure("Treeview.Heading", font=("Segoe UI", 9, "bold"), background="#dcfce7", foreground="#166534")
+style.configure("Treeview", font=("Segoe UI", 9), rowheight=25, background="white", fieldbackground="white")
