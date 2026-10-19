@@ -153,3 +153,15 @@ style = ttk.Style()
 style.theme_use("clam")
 style.configure("Treeview.Heading", font=("Segoe UI", 9, "bold"), background="#dcfce7", foreground="#166534")
 style.configure("Treeview", font=("Segoe UI", 9), rowheight=25, background="white", fieldbackground="white")
+
+columns = ("Iter", "x_n", "g(x_n)", "Error")
+tree = ttk.Treeview(table_card, columns=columns, show="headings", height=8)
+for col in columns:
+    tree.heading(col, text=col)
+    tree.column(col, width=85, anchor="center")
+
+tree.tag_configure('even', background='#f0fdf4')
+tree.tag_configure('odd', background='#ffffff')
+
+scrollbar = ttk.Scrollbar(table_card, orient="vertical", command=tree.yview)
+tree.configure(yscrollcommand=scrollbar.set)
